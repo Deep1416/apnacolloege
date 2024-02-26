@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Counter</title>
+    <style>
+      #charCount {
+        color: #555;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="textArea" rows="4" cols="50"></textarea>
+    <p id="charCount">Character count: 0</p>
+
+    // you need to write a code for character count if you type any word it will
+    increase and if you delete it will decrese
+    <script>
+      let text = document.getElementById("textArea");
+      text.addEventListener("input", () => {
+        let x = text.value;
+
+        let y = x.split(" ").join("");
+        console.log(y);
+        document.querySelector("p").innerText = y.length;
+      });
+    </script>
+  </body>
+</html>

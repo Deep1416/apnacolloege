@@ -1,0 +1,79 @@
+<!-- Create a GitHub user search app that allows users to search for GitHub users by username and displays basic user information (e.g., avatar, username) from the GitHub API.
+
+API: https://api.github.com/users/rlavinsh
+
+Starter Code: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub User Search</title>
+</head>
+<body>
+  <h1>GitHub User Search</h1>
+  <input type="text" id="searchInput" placeholder="Enter GitHub username">
+  <button id="searchButton">Search</button>
+  <div id="userInfo">
+    <img id="avatar" alt="User Avatar">
+    <p><strong>Username:</strong> <span id="username"></span></p>
+  </div>
+</body>
+<script>
+
+let spi = "https://api.github.com/users/rlavinsh";
+
+ async function github(){
+    let fecthapi = await fetch(spi);
+    let x = await fecthapi.json();
+    console.log(x);
+    document.querySelector("img").setAttribute("src" , x.avatar_url)
+
+    document.querySelector("span").innerText = x.login;
+
+    
+ }
+
+
+
+
+document.querySelector("button").addEventListener("click" ,() =>{
+    let x = document.querySelector("input").value;
+    console.log(x);
+    if(x == "rlavinsh"){
+        github();
+    }else{
+
+    }
+})
+
+// let arr = [1 , 2 ,3 , 4 , 5 , 6 , 7 , 8];
+
+// let even = arr.filter((e)=>{
+//     if(e % 2 == 0).reduce((acc , e)=>{
+//         acc += e* e;
+//         return acc;
+//     })
+// })
+// console.log(even);
+
+let a=[1,2,3,4,5,6,7,8];
+//     let output=a.filter(e=>e%2==0).reduce((acc,e)=>{
+//            acc+=(e*e);
+//            return acc;
+//     },0)
+
+//     console.log(output)
+
+let x = a.filter((e)=>{
+    if(e % 2 ==0){
+        return e;
+    }
+}).reduce((acc , e) =>{
+    acc += e*e;
+    return acc;
+},0)
+console.log(x);
+
+
+</script>
+</html>

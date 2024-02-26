@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Create a GitHub user search app that allows users to search for
+GitHub users by username and displays basic user information
+(e.g., avatar, username) from the GitHub API.
+API: https://api.github.com/users/rlavinsh
+Starter Code: -->
+    <!-- <!DOCTYPE html>
+    <html>
+      <head>
+        <title>GitHub User Search</title>
+      </head>
+      <body>
+        <h1>GitHub User Search</h1>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Enter GitHub username"
+        />
+        <button id="searchButton">Search</button>
+        <div id="userInfo">
+          <img id="avatar" alt="User Avatar" />
+          <p><strong>Username:</strong> <span id="username"></span></p>
+        </div>
+        <script src="./script.js"></script>
+      </body>
+    </html> -->
+    <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch and Display Data</title>
+</head> -->
+<body>
+  <ul id="dataList"> hello</ul>
+
+  <script src="./index.js">
+   let api =  'https://jsonplaceholder.typicode.com/posts';
+
+  async function tittle(){
+
+    let apiFectch = await fetch(api);
+    let data = await apiFectch.json();
+
+    data.forEach(element => {
+      console.log(element);
+    });
+
+   }
+  </script>
+</body>
+</html>
+  <!-- </body>
+</html> -->
