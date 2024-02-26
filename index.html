@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Image Gallery</title>
+    <style>
+      #gallery-container {
+        text-align: center;
+      }
+      #image {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gallery-container">
+      <!-- <img
+        id="image"
+        src="https://images.unsplash.com/photo-1695142260208-520c6ce6c061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        alt="Image 1"
+      /> -->
+      <br />
+      <button id="prevBtn">Previous</button>
+      <button id="nextBtn">Next</button>
+    </div>
+    <script>
+    //   let prevBtn = document.getElementById("prevBtn");
+    //   let nextBtn = document.getElementById("nextBtn");
+
+    //   let arr = ["https://images.unsplash.com/photo-1695142260208-520c6ce6c061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80","https://cdn.pixabay.com/photo/2023/10/28/16/27/mountains-8347890_1280.jpg","https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"];
+    //   let count = 0
+    //   prevBtn.addEventListener("click" ,(e)=>{
+    //     if(count>0)count--
+          
+    //       console.log(arr[count]);
+    //       document.getElementById("image").setAttribute("src" ,arr[count]);
+    //   });
+    //   nextBtn.addEventListener("click" ,()=>{
+    //     if(count<0)count--
+    //       count++;
+    //       document.getElementById("image").setAttribute("src" ,arr[count]);
+    //   });
+
+      // function foo(){
+
+      //     return "hello"
+      // }
+      // const result = foo();
+      // console.log(result);
+
+      // let arr =[1 , 2 , 3 , 4 , 5];
+
+      // let sum =0;
+      // for(let i = 0; i < arr.length ;i++){
+      //     sum += arr[i];
+
+      // }
+      // console.log(sum);
+
+    //   function x(){
+    //     for(let i = 0; i < 5; i++){
+    //         setTimeout(() => {
+    //             console.log(i);
+    //         },i* 1000);
+    //     }
+    //   }
+    //   x()
+
+    // let arr = [11 , 12 , 13  ];
+    // let x = arr[0];
+    // let m = 0;
+    // for(let i = 0 ; i < arr.length ; i++){
+    //     if(arr[i] != x){
+    //         // console.log(x);
+    //         m++;
+    //         // break;
+    //     }
+    //     x++;
+    // }
+    // if(m == 0){
+    //     console.log(arr[0]-1);
+    // }
+    
+    const arr = ["apple", "apple", "apple", "apple", "mango", "mango", "banana"];
+
+let frequency = arr.reduce((acc, e) => {
+ acc[e] = (acc[e] || 0) + 1;
+ return acc;
+}, {});
+
+for(let i in frequency)
+console.log(frequency[i]);
+
+    
+    </script>
+  </body>
+</html>
+
+<!-- 
+    1.Create a simple image gallery with next and previous buttons
+Image-1 Url: https://cdn.pixabay.com/photo/2023/10/28/16/27/mountains-8347890_1280.jpg
+
+Image-2 Url: https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg -->
